@@ -3,12 +3,15 @@
     --body-background-color: gray;
     --navbar-footer-color: silver;
     --project-background-color: aqua;
-  }
+}
   
 * {
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  overflow: auto;
 }
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -35,16 +38,22 @@ html {
 
 body {
   font-family: sans-serif, Tahoma;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  text-align: 700;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 4.2rem;
 }
 
 ul {
@@ -53,7 +62,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 img {
@@ -65,7 +73,7 @@ img {
 
 #navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -74,28 +82,18 @@ img {
   z-index: 10;
 }
 
-#name {
-}
-
 #nav-list {
   display: flex;
 }
 
-@media (max-width: 28.75em) {
-  #navbar {
-    justify-content: center;
-  }
-  #navlist {
-    display: flex;
-  }
-}
-
 #nav-list a {
   display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
 }
 
 #nav-list a:hover {
-  background-color: gold;
+  background-color: var(--body-background-color);
 }
 
 /* Welcome section */
@@ -109,18 +107,31 @@ img {
   height: 100vh;
 }
 
+#welcome-section p {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
 /* Projects section */
 
 #projects {
-  border: 1px solid black;
+  text-align: center;
   padding: 10rem 2rem;
+  border: 1px solid black;
 }
 
-#projects #projects-section-heading {
-  margin-bottom: 6rem;
+#projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
 }
 
-#projects #projects-grid {
+@media (max-width: 28.75em) {
+  #projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+#projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 4rem;
@@ -128,6 +139,15 @@ img {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+@media (max-width: 30.625em) {
+  #projects {
+    padding: 6rem 1rem;
+  }
+  #projects-grid {
+    grid-template-columns: 1fr;
+  }
+} 
 
 #projects #projects-grid a {
 
