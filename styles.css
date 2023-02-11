@@ -8,8 +8,6 @@
 * {
   margin: 0;
   padding: 0;
-  word-wrap: break-word;
-  overflow: auto;
 }
 
 html {
@@ -45,15 +43,24 @@ body {
 
 h1, h2, h3 {
   font-weight: 700;
-  text-align: 700;
+  text-align: center;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 4.2rem;
+  font-size: 2.75rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.75rem;
+  text-align: center;
 }
 
 ul {
@@ -78,7 +85,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
   z-index: 10;
 }
 
@@ -88,7 +95,7 @@ img {
 
 #nav-list a {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2rem;
   padding: 2rem;
 }
 
@@ -105,16 +112,13 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-}
-
-#welcome-section p {
-  font-size: 3rem;
-  font-weight: 200;
+  border: 1px solid black;
 }
 
 /* Projects section */
 
 #projects {
+  width: 100%;
   text-align: center;
   padding: 10rem 2rem;
   border: 1px solid black;
@@ -127,7 +131,7 @@ img {
 
 @media (max-width: 28.75em) {
   #projects-section-header {
-    font-size: 4rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -149,41 +153,40 @@ img {
   }
 } 
 
-#projects #projects-grid a {
-
-}
-
-#projects #projects-grid img {
+.project-image {
+  height: calc(100% - 6.8rem);
   width: 100%;
   object-fit: cover;
 }
 
-#projects #projects-grid .project-title {
-
+.project-title {
+  padding: 2rem 0.5rem;
 }
 
-#projects #projects-grid .project-description {
-
-}
+/* Contact Section */
 
 #contact {
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 0 2rem;
+  border: 1px solid black;
 }
 
-#contact #contact-section-heading {
-
+#contact-section-header {
+  font-size: 2rem;
 }
 
-#contact #contact-links {
+#contact-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
 }
 
 #contact #contact-links a {
-  display: block;
-  text-decoration: none;
   padding: 0 5px;
   transition: transform 0.3s ease-out;
 }
@@ -191,6 +194,8 @@ img {
 #contact #contact-links a:hover {
   transform: translateY(5px);
 }
+
+/* Footer */
 
 footer {
   border-top: 1px solid black;
