@@ -150,7 +150,11 @@ img {
   #projects-grid {
     grid-template-columns: 1fr;
   }
-} 
+}
+
+#projects-grid a {
+  border: 2px solid black;
+}
 
 .project-image {
   height: calc(100% - 6.8rem);
@@ -161,6 +165,8 @@ img {
 .project-title {
   padding: 2rem 0.5rem;
   background-color: var(--navbar-project-setting-footer-color);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 /* Contact Section */
