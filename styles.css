@@ -99,6 +99,7 @@ img {
 #nav-list a {
   display: block;
   font-size: 2rem;
+  font-weight: 700;
   padding: 2rem;
 }
 
